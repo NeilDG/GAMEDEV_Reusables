@@ -12,4 +12,9 @@ public class MainMenuScreen : View {
 	public void OnUIDemoClicked() {
 		LoadManager.Instance.LoadScene (SceneNames.UI_DEMO_SCENE);
 	}
+
+	public void OnObjectPoolClicked() {
+		LoadManager.Instance.LoadScene (SceneNames.OBJECT_POOL_SCENE);
+	}
+
 }
