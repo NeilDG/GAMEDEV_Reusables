@@ -30,12 +30,12 @@ public class GameObjectPool : MonoBehaviour {
 		}
 	}
 
-	public bool HasObjectAvailable() {
-		return this.availableObjects.Count > 0;
+	public bool HasObjectAvailable(int requestSize) {
+		return this.availableObjects.Count >= requestSize;
 	}
 
 	public APoolable RequestPoolable() {
-		if (this.HasObjectAvailable ()) {
+		if (this.HasObjectAvailable (1)) {
 			APoolable poolableObject = this.availableObjects [this.availableObjects.Count - 1];
 			this.availableObjects.RemoveAt (this.availableObjects.Count - 1);
 			this.usedObjects.Add (poolableObject);
@@ -50,7 +50,7 @@ public class GameObjectPool : MonoBehaviour {
 	}
 
 	public APoolable[] RequestPoolableBatch(int size) {
-		if (this.availableObjects.Count >= size) {
+		if (this.HasObjectAvailable(size)) {
 			APoolable[] poolableObjects = new APoolable[size];
 
 			for (int i = 0; i < size; i++) {
