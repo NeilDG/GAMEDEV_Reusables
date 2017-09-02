@@ -19,4 +19,8 @@ public class UIDemoScreen : View {
 	public void OnUIAnimationsClicked() {
 		ViewHandler.Instance.Show (ViewNames.UI_ANIM_SCREEN_NAME);
 	}
+
+	public void OnInfiniteScrollClicked() {
+		ViewHandler.Instance.Show (ViewNames.SCROLL_DEMO_SCREEN);
+	}
 }
