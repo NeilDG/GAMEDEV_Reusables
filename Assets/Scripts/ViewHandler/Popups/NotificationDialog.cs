@@ -12,7 +12,6 @@ public class NotificationDialog : View, DialogInterface
 	[SerializeField] protected Text messageText;
 	[SerializeField] private Button closeButton;
 	[SerializeField] private Text confirmText;
-	[SerializeField] private Image confirmIcon;
 
 	private System.Action onConfirmAction;
 	private System.Action onCancelAction;
@@ -20,11 +19,6 @@ public class NotificationDialog : View, DialogInterface
 
 	private RectTransform textRect;
 	private const float TEXT_OFFSET = 30.0f;
-
-	void Awake()
-	{
-		this.textRect  = confirmText.GetComponent<RectTransform>();
-	}
 
 	public override void OnShowStarted()
 	{
