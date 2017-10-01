@@ -922,6 +922,10 @@ Prefab:
       propertyPath: m_SizeDelta.x
       value: -17
       objectReference: {fileID: 0}
+    - target: {fileID: 1640922768945654, guid: e95ea3287c8030a4c9ca817568e17a60, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e95ea3287c8030a4c9ca817568e17a60, type: 2}
   m_IsPrefabParent: 0
