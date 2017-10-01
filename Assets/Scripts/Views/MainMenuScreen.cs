@@ -17,4 +17,7 @@ public class MainMenuScreen : View {
 		LoadManager.Instance.LoadScene (SceneNames.OBJECT_POOL_SCENE);
 	}
 
+	public void OnBroadcastingDemoClicked() {
+		LoadManager.Instance.LoadScene (SceneNames.BROADCASTING_SCENE);
+	}
 }
