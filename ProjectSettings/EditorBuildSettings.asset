@@ -17,3 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EventBroadcasterDemo.unity
     guid: 8609cbc24e590ef4789eee154e26bcc3
+  - enabled: 1
+    path: Assets/Scenes/SceneLighting.unity
+    guid: 898fc91607947d24cbd519a86cebb543

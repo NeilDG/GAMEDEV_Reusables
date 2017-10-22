@@ -20,4 +20,8 @@ public class MainMenuScreen : View {
 	public void OnBroadcastingDemoClicked() {
 		LoadManager.Instance.LoadScene (SceneNames.BROADCASTING_SCENE);
 	}
+
+	public void OnSceneLightingClicked() {
+		LoadManager.Instance.LoadScene (SceneNames.SCENE_LIGHTING);
+	}
 }
