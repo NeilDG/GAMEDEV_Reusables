@@ -10,6 +10,7 @@ public class ViewNames {
 	public const string BASIC_UI_SCREEN_NAME = "BasicUIScreen";
 	public const string UI_ANIM_SCREEN_NAME = "UIAnimScreen";
 	public const string SCROLL_DEMO_SCREEN = "ScrollDemoScreen";
+	public const string INFO_SCREEN_NAME = "InfoScreen";
 
 	public class DialogNames {
 		public const string TWO_CHOICE_DIALOG_NAME = "TwoChoiceDialog";
