@@ -11,4 +11,5 @@ public class SceneNames {
 	public const string OBJECT_POOL_SCENE = "ObjectPoolScene";
 	public const string BROADCASTING_SCENE = "EventBroadcasterDemo";
 	public const string SCENE_LIGHTING = "SceneLighting";
+	public const string ANIMATION_DEMO = "BasicAnimationDemo";
 }

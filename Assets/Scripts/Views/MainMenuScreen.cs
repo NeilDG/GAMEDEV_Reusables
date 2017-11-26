@@ -24,4 +24,8 @@ public class MainMenuScreen : View {
 	public void OnSceneLightingClicked() {
 		LoadManager.Instance.LoadScene (SceneNames.SCENE_LIGHTING);
 	}
+
+	public void OnAnimationSceneClicked() {
+		LoadManager.Instance.LoadScene (SceneNames.ANIMATION_DEMO);
+	}
 }
