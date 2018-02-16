@@ -28,4 +28,8 @@ public class MainMenuScreen : View {
 	public void OnAnimationSceneClicked() {
 		LoadManager.Instance.LoadScene (SceneNames.ANIMATION_DEMO);
 	}
+
+	public void OnParticleSceneClicked() {
+		LoadManager.Instance.LoadScene (SceneNames.PARTICLE_EFFECT_DEMO);
+	}
 }

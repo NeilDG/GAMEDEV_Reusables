@@ -18,4 +18,8 @@ public class InfoScreen : View {
 		NotificationDialog notifDiaglog = (NotificationDialog) DialogBuilder.Create (DialogBuilder.DialogType.NOTIFICATION);
 		notifDiaglog.SetMessage ("Test popup");
 	}
+
+	public void OnMainMenuClicked() {
+		LoadManager.Instance.LoadScene (SceneNames.MAIN_SCENE);
+	}
 }
