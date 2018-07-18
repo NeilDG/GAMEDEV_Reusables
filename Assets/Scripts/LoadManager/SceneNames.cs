@@ -13,4 +13,8 @@ public class SceneNames {
 	public const string SCENE_LIGHTING = "SceneLighting";
 	public const string ANIMATION_DEMO = "BasicAnimationDemo";
 	public const string PARTICLE_EFFECT_DEMO = "ParticleEffectsDemo";
+    public const string VISUAL_EFFECTS_MENU_SCENE = "VisualEffectsMenuScene";
+    public const string BASIC_LIGHTING_SCENE = "BasicLightingScene";
+    public const string REALTIME_LIGHTING_SCENE = "RealtimeLighting";
+    public const string BAKED_LIGHTING_SCENE = "BakedLighting";
 }

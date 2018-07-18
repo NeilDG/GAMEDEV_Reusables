@@ -22,8 +22,9 @@ public class MainMenuScreen : View {
 	}
 
 	public void OnSceneLightingClicked() {
-		LoadManager.Instance.LoadScene (SceneNames.SCENE_LIGHTING);
-	}
+		//LoadManager.Instance.LoadScene (SceneNames.SCENE_LIGHTING);
+        LoadManager.Instance.LoadScene(SceneNames.VISUAL_EFFECTS_MENU_SCENE);
+    }
 
 	public void OnAnimationSceneClicked() {
 		LoadManager.Instance.LoadScene (SceneNames.ANIMATION_DEMO);
