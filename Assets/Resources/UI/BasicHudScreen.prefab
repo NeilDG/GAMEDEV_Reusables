@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 222464682327087466}
   - component: {fileID: 114215981496342530}
   m_Layer: 5
-  m_Name: ObjectPoolUIScreen
+  m_Name: BasicHudScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

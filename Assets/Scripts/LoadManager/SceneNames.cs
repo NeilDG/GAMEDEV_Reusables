@@ -17,4 +17,5 @@ public class SceneNames {
     public const string BASIC_LIGHTING_SCENE = "BasicLightingScene";
     public const string REALTIME_LIGHTING_SCENE = "RealtimeLighting";
     public const string BAKED_LIGHTING_SCENE = "BakedLighting";
+    public const string ADVANCED_ANIMATION_SCENE = "AdvancedAnimationDemo";
 }

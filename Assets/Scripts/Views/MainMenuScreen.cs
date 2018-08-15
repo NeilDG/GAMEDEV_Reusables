@@ -30,6 +30,11 @@ public class MainMenuScreen : View {
 		LoadManager.Instance.LoadScene (SceneNames.ANIMATION_DEMO);
 	}
 
+    public void OnAdvancedAnimClicked()
+    {
+        LoadManager.Instance.LoadScene(SceneNames.ADVANCED_ANIMATION_SCENE);
+    }
+
 	public void OnParticleSceneClicked() {
 		LoadManager.Instance.LoadScene (SceneNames.PARTICLE_EFFECT_DEMO);
 	}

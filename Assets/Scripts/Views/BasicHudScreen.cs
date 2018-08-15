@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectPoolUIScreen : View {
+public class BasicHudScreen : View {
 
 	// Use this for initialization
 	void Start () {
