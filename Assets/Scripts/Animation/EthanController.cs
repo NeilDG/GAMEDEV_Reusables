@@ -7,6 +7,7 @@ public class EthanController : MonoBehaviour {
 
     private const string ETHAN_SPEED_KEY = "EthanSpeed";
     private const string ETHAN_JUMP_KEY = "Jump";
+    private const string ETHAN_CROUCH_KEY = "Crouch";
 
     private const string ETHAN_FORWARD_KEY = "ForwardSpeed";
     private const string ETHAN_TURN_KEY = "Turn";
@@ -68,6 +69,14 @@ public class EthanController : MonoBehaviour {
 
         if(Input.GetKeyDown(KeyCode.Space)) {
             this.ethanAnimator.SetTrigger(ETHAN_JUMP_KEY);
+        }
+
+        if(Input.GetKeyDown(KeyCode.LeftControl)) {
+            this.ethanAnimator.SetBool(ETHAN_CROUCH_KEY, true);
+        }
+
+        if(Input.GetKeyUp(KeyCode.LeftControl)) {
+            this.ethanAnimator.SetBool(ETHAN_CROUCH_KEY, false);
         }
 
         if(Input.GetKey(KeyCode.D)) {
