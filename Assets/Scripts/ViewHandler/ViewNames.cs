@@ -12,6 +12,7 @@ public class ViewNames {
 	public const string SCROLL_DEMO_SCREEN = "ScrollDemoScreen";
 	public const string INFO_SCREEN_NAME = "InfoScreen";
     public const string BASIC_HUD_SCREEN = "BasicHudScreen";
+    public const string DOTA_UI_SCREEN = "DotaUIScreen";
 
 
     public class DialogNames {
