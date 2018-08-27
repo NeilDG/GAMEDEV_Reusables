@@ -20,7 +20,7 @@ public class UIDemoScreen : View {
 		ViewHandler.Instance.Show (ViewNames.UI_ANIM_SCREEN_NAME);
 	}
 
-	public void OnInfiniteScrollClicked() {
-		ViewHandler.Instance.Show (ViewNames.SCROLL_DEMO_SCREEN);
+	public void OnDota2Clicked() {
+        LoadManager.Instance.LoadScene(SceneNames.DOTA_2_UI_SAMPLE_SCENE);
 	}
 }

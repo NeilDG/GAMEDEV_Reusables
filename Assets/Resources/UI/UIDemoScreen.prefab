@@ -582,7 +582,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114978169973665520}
   m_HandleRect: {fileID: 224359803867495402}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -803,10 +803,10 @@ MonoBehaviour:
   m_Padding:
     m_Left: 0
     m_Right: 0
-    m_Top: 50
-    m_Bottom: 50
+    m_Top: 15
+    m_Bottom: 15
   m_ChildAlignment: 1
-  m_Spacing: 50
+  m_Spacing: 20
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
@@ -851,7 +851,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114234154970070296}
-        m_MethodName: OnInfiniteScrollClicked
+        m_MethodName: OnDota2Clicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -922,7 +922,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Infinite Scroll Demo
+  m_Text: Dota 2 UI Demo
 --- !u!114 &114953316277263506
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1102,8 +1102,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -6.9, y: -83.7}
-  m_SizeDelta: {x: -90.9, y: -267.2}
+  m_AnchoredPosition: {x: -6.899994, y: -28.1}
+  m_SizeDelta: {x: -90.9, y: -155.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224183709381692330
 RectTransform:
@@ -1141,7 +1141,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0, y: -0.000023402274}
+  m_AnchoredPosition: {x: -0, y: 0.000007085198}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!224 &224290427303274942

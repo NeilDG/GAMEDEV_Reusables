@@ -41,4 +41,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AdvancedAnimationDemo.unity
     guid: f2edf11bbfb45614995511cd8d5180f9
+  - enabled: 1
+    path: Assets/Scenes/Dota2UISample.unity
+    guid: ddf7956b3fa481444a4a93ca316c8f0a
   m_configObjects: {}
