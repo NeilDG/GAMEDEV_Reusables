@@ -11,9 +11,11 @@ public class PaddleController : MonoBehaviour {
     [SerializeField] private Transform rightPaddle;
 
     private float ticks = 0.0f;
-    private const float INPUT_DELAY = 0.25f;
+    private const float TICKS_MULTIPLIER = 2.0f;
 
-    private bool readInput = false;
+
+    private bool leftPaddleOn = false;
+    private bool rightPaddleOn = false;
 
 	// Use this for initialization
 	void Start () {
@@ -22,35 +24,46 @@ public class PaddleController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (this.ticks > INPUT_DELAY) {
-            this.ticks = 0.0f;
-            this.readInput = false;
-        }
-        else {
-            this.ticks += Time.deltaTime;
-        }
 
-        if (Input.GetKeyDown(KeyCode.A) && !this.readInput) {
-            this.readInput = true;
-            this.leftPaddle.Rotate(0.0f, 0.0f, 80.0f);
+        if (Input.GetKeyDown(KeyCode.A)) {
+            this.leftPaddleOn = true; this.ticks = 0.0f;
             this.leftPaddleForce.SetInputToggle(true);
         }
         else if(Input.GetKeyUp(KeyCode.A)) {
-            this.leftPaddle.localRotation = Quaternion.identity;
+            this.leftPaddleOn = false; this.ticks = 0.0f;
             this.leftPaddleForce.SetInputToggle(false);
         }
 
-        if(Input.GetKeyDown(KeyCode.D) && !this.readInput) {
-            this.readInput = true;
-            this.rightPaddle.Rotate(0.0f, 0.0f, -80.0f);
+        if(Input.GetKeyDown(KeyCode.D)) {
+            this.rightPaddleOn = true; this.ticks = 0.0f;
             this.rightPaddleForce.SetInputToggle(true);
         }
 
         else if (Input.GetKeyUp(KeyCode.D)) {
-            this.rightPaddle.localRotation = Quaternion.identity;
+            this.rightPaddleOn = false; this.ticks = 0.0f;
             this.rightPaddleForce.SetInputToggle(false);
         }
 
-       
+        if(this.leftPaddleOn) {
+            this.ticks += Time.deltaTime * TICKS_MULTIPLIER;
+            Quaternion newRot = Quaternion.Euler(0.0f, 0.0f, 80.0f);
+            this.leftPaddle.localRotation = Quaternion.Slerp(this.leftPaddle.localRotation, newRot, this.ticks);
+        }
+        else if(!this.leftPaddleOn) {
+            this.ticks += Time.deltaTime * TICKS_MULTIPLIER;
+            this.leftPaddle.localRotation = Quaternion.Slerp(this.leftPaddle.localRotation, Quaternion.identity, this.ticks);
+        }
+
+        if (this.rightPaddleOn) {
+            this.ticks += Time.deltaTime * TICKS_MULTIPLIER;
+            Quaternion newRot = Quaternion.Euler(0.0f, 0.0f, -80.0f);
+            this.rightPaddle.localRotation = Quaternion.Slerp(this.rightPaddle.localRotation, newRot, this.ticks);
+        }
+        else if (!this.rightPaddleOn) {
+            this.ticks += Time.deltaTime * TICKS_MULTIPLIER;
+            this.rightPaddle.localRotation = Quaternion.Slerp(this.rightPaddle.localRotation, Quaternion.identity, this.ticks);
+        }
+
+
     }
 }

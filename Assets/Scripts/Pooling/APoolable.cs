@@ -8,7 +8,7 @@ using UnityEngine;
 /// </summary>
 public abstract class APoolable : MonoBehaviour {
 
-	[SerializeField] protected GameObjectPool poolRef;
+	protected GameObjectPool poolRef;
 
 	public void SetPoolRef(GameObjectPool poolRef) {
 		this.poolRef = poolRef;
