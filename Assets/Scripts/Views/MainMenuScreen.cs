@@ -38,4 +38,8 @@ public class MainMenuScreen : View {
 	public void OnParticleSceneClicked() {
 		LoadManager.Instance.LoadScene (SceneNames.PARTICLE_EFFECT_DEMO);
 	}
+
+    public void OnPathfindingClicked() {
+        LoadManager.Instance.LoadScene(SceneNames.PATHFINDING_SCENE);
+    }
 }

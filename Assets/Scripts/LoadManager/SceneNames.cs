@@ -19,4 +19,5 @@ public class SceneNames {
     public const string BAKED_LIGHTING_SCENE = "BakedLighting";
     public const string ADVANCED_ANIMATION_SCENE = "AdvancedAnimationDemo";
     public const string DOTA_2_UI_SAMPLE_SCENE = "Dota2UISample";
+    public const string PATHFINDING_SCENE = "PathfindingScene";
 }
