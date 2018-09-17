@@ -10,6 +10,7 @@ public class MouseClicker : MonoBehaviour {
 
     [SerializeField] private Camera mainCamera;
     [SerializeField] private NavMeshAgent agent;
+
 	// Use this for initialization
 	void Start () {
 		
