@@ -42,4 +42,8 @@ public class MainMenuScreen : View {
     public void OnPathfindingClicked() {
         LoadManager.Instance.LoadScene(SceneNames.PATHFINDING_SCENE);
     }
+
+    public void OnAudioClicked() {
+        LoadManager.Instance.LoadScene(SceneNames.AUDIO_SCENE);
+    }
 }
