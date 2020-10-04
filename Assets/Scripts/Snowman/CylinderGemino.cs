@@ -26,6 +26,10 @@ public class CylinderGemino : MonoBehaviour
 
     private void OnDestroy()
     {
+        /*for(int i = 0; i < this.geminiList.Count; i++)
+        {
+            GameObject.Destroy(this.geminiList[i]);
+        }*/ //not required
         this.geminiList.Clear();
     }
 

@@ -6,6 +6,7 @@ using UnityEngine;
 public class SnowmanController : MonoBehaviour
 {
     [SerializeField] private float speed = 10.0f;
+    [SerializeField] private SnowmanController_2 anotherController;
 
     private enum Direction
     {
@@ -18,10 +19,18 @@ public class SnowmanController : MonoBehaviour
 
     private Direction currentDir = Direction.NONE;
 
+    
+    //Awake is called before start
+    private void Awake()
+    {
+        
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        Input.GetMouseButtonDown(0); //mouse by default on PC. Android. Screen tap.
+        Input.GetKeyDown(KeyCode.Escape); //ESC button on PC. Android/Mobile = Back button.
     }
 
     // Update is called once per frame

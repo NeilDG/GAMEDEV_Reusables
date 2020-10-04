@@ -7,7 +7,7 @@ public class SpawnDemo_1 : MonoBehaviour
 {
     [SerializeField] private GameObject templateObject;
     [SerializeField] private Transform parent;
-    [SerializeField] private GameObject[] spawnLocations;
+    [SerializeField] private Transform[] spawnLocations;
 
     private GameObject activeObject;
     private float ticks = 0.0f;
@@ -42,7 +42,7 @@ public class SpawnDemo_1 : MonoBehaviour
             this.activeObject = this.SpawnDefault();
 
             Vector3 myLocation = this.activeObject.transform.localPosition;
-            Vector3 newLocation = this.spawnLocations[this.spawnIndex].transform.localPosition;
+            Vector3 newLocation = this.spawnLocations[this.spawnIndex].localPosition;
             myLocation.x = newLocation.x;
             myLocation.z = newLocation.z;
             this.activeObject.transform.localPosition = myLocation;

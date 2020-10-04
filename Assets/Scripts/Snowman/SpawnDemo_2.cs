@@ -69,6 +69,7 @@ public class SpawnDemo_2 : MonoBehaviour
         for (int i = 0; i < this.geminoList.Count; i++)
         {
             GameObject.Destroy(this.geminoList[i].gameObject); //if without .gameObject, only the component is destroyed!
+            //calls a component function OnDestroy()
         }
 
         //Don't forget to clear!
