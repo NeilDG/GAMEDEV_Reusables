@@ -3,17 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Animations;
 
+[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(CapsuleCollider))]
+[RequireComponent(typeof(Animator))]
 public class EthanController : MonoBehaviour {
 
     private const string ETHAN_SPEED_KEY = "EthanSpeed";
     private const string ETHAN_JUMP_KEY = "Jump";
     private const string ETHAN_CROUCH_KEY = "Crouch";
 
-    private const string ETHAN_FORWARD_KEY = "ForwardSpeed";
+    private const string ETHAN_FORWARD_KEY = "Forward";
     private const string ETHAN_TURN_KEY = "Turn";
 
-
-    [SerializeField] private Animator ethanAnimator;
+    private Animator ethanAnimator;
+    private Rigidbody ethanRigidBody;
+    private BoxCollider ethanBoxCollider;
 
     private const float CAMERA_TURN_AMOUNT = 200.0f;
 
@@ -26,15 +30,18 @@ public class EthanController : MonoBehaviour {
     private KeyCode lastTurnPress;
 
 	// Use this for initialization
-	void Start () {
-	    
-	}
+	void Start ()
+    {
+        this.ethanAnimator = this.GetComponent<Animator>();
+        this.ethanRigidBody = this.GetComponent<Rigidbody>();
+        this.ethanBoxCollider = this.GetComponent<BoxCollider>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
+
 		if(Input.GetKey(KeyCode.W)) {
             
-           
             if(Input.GetKey(KeyCode.LeftShift)) {
                 //run
                 //this.ethanAnimator.SetInteger(ETHAN_SPEED_KEY, 5);
@@ -71,12 +78,15 @@ public class EthanController : MonoBehaviour {
             this.ethanAnimator.SetTrigger(ETHAN_JUMP_KEY);
         }
 
-        if(Input.GetKeyDown(KeyCode.LeftControl)) {
+
+        if (Input.GetKeyDown(KeyCode.LeftControl)) {
             this.ethanAnimator.SetBool(ETHAN_CROUCH_KEY, true);
+            this.ethanRigidBody.constraints = RigidbodyConstraints.FreezePositionY;
         }
 
         if(Input.GetKeyUp(KeyCode.LeftControl)) {
             this.ethanAnimator.SetBool(ETHAN_CROUCH_KEY, false);
+            this.ethanRigidBody.constraints = RigidbodyConstraints.None;
         }
 
         if(Input.GetKey(KeyCode.D)) {
