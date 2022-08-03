@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Animations;
 
 [RequireComponent(typeof(Rigidbody))]
-[RequireComponent(typeof(CapsuleCollider))]
+[RequireComponent(typeof(BoxCollider))]
 [RequireComponent(typeof(Animator))]
 public class EthanController : MonoBehaviour {
 
@@ -38,7 +38,7 @@ public class EthanController : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 
 		if(Input.GetKey(KeyCode.W)) {
             
