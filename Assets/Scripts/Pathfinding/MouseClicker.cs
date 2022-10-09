@@ -24,7 +24,7 @@ public class MouseClicker : MonoBehaviour {
 
             RaycastHit hit;
             if(Physics.Raycast(ray.origin, ray.direction, out hit)) {
-                Debug.Log("Raycast hit: " + hit.collider.gameObject.name);
+                Debug.Log("Raycast hit: " + hit.collider.gameObject.name + " point: " + hit.point);
                 this.agent.SetDestination(hit.point);
             }
         }
